@@ -1,0 +1,63 @@
+@page "/reservation"
+@rendermode InteractiveServer
+
+<PageTitle>座位预约</PageTitle>
+
+<h1>座位预约系统</h1>
+
+<p>这个组件用于展示和管理座位预约功能。</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                可用座位
+            </div>
+            <div class="card-body">
+                <p>当前可用座位：20个</p>
+                <button class="btn btn-primary" @onclick="ReserveSeat">预约座位</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                我的预约
+            </div>
+            <div class="card-body">
+                @if (myReservations.Count > 0)
+                {
+                    <ul class="list-group">
+                        @foreach (var reservation in myReservations)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @reservation
+                                <button class="btn btn-sm btn-danger" @onclick="() => CancelReservation(reservation)">取消</button>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>您还没有预约座位。</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<string> myReservations = new List<string>();
+    
+    private void ReserveSeat()
+    {
+        var reservationId = $"座位 #{myReservations.Count + 1} - {DateTime.Now.ToString("yyyy-MM-dd HH:mm")}";
+        myReservations.Add(reservationId);
+    }
+    
+    private void CancelReservation(string reservation)
+    {
+        myReservations.Remove(reservation);
+    }
+}
