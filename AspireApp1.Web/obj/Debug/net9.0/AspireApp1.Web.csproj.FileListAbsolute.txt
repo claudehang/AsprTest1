@@ -103,8 +103,6 @@ D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\pkh7lrn5xe-nwt30
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\eeody1w371-863ma95x1u.gz
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\yiqxfzsmks-bpm1rms81z.gz
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\m9e4b5qxo1-r5zwdj19ss.gz
-D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\414240mgx8-tshm6dq420.gz
-D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\s9mdrhq27o-tshm6dq420.gz
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\staticwebassets.build.json
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\staticwebassets.development.json
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -120,3 +118,5 @@ D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\refint\AspireApp1.Web.dll
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\AspireApp1.Web.pdb
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\AspireApp1.Web.genruntimeconfig.cache
 D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\ref\AspireApp1.Web.dll
+D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\414240mgx8-h54ytcuvgv.gz
+D:\code\vs\AsprTest1\AspireApp1.Web\obj\Debug\net9.0\compressed\s9mdrhq27o-h54ytcuvgv.gz

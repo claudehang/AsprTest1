@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mt75T2o8NGYl+jr077cUnbpgDs2e+H8IC73SuovevUg=",
+  "Hash": "AUDjE0mC3EsQEPkgCy78ajwxPUbFDyp7KITk4P6AZiA=",
   "Source": "AspireApp1.Web",
   "BasePath": "_content/AspireApp1.Web",
   "Mode": "Default",
@@ -143,12 +143,12 @@
       "OriginalItemSpec": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-tshm6dq420.gz",
+      "Identity": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-h54ytcuvgv.gz",
       "SourceId": "AspireApp1.Web",
       "SourceType": "Computed",
       "ContentRoot": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/AspireApp1.Web",
-      "RelativePath": "AspireApp1.Web#[.{fingerprint=tshm6dq420}]?.styles.css.gz",
+      "RelativePath": "AspireApp1.Web#[.{fingerprint=h54ytcuvgv}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -157,8 +157,8 @@
       "RelatedAsset": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\AspireApp1.Web.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "6sg1j7nvs7",
-      "Integrity": "NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=",
+      "Fingerprint": "inz22dl195",
+      "Integrity": "/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\AspireApp1.Web.styles.css"
@@ -941,12 +941,12 @@
       "OriginalItemSpec": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-tshm6dq420.gz",
+      "Identity": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-h54ytcuvgv.gz",
       "SourceId": "AspireApp1.Web",
       "SourceType": "Computed",
       "ContentRoot": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/AspireApp1.Web",
-      "RelativePath": "AspireApp1.Web#[.{fingerprint=tshm6dq420}]!.bundle.scp.css.gz",
+      "RelativePath": "AspireApp1.Web#[.{fingerprint=h54ytcuvgv}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -955,8 +955,8 @@
       "RelatedAsset": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\AspireApp1.Web.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "6sg1j7nvs7",
-      "Integrity": "NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=",
+      "Fingerprint": "inz22dl195",
+      "Integrity": "/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\AspireApp1.Web.bundle.scp.css"
@@ -1018,8 +1018,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "tshm6dq420",
-      "Integrity": "Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=",
+      "Fingerprint": "h54ytcuvgv",
+      "Integrity": "eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\AspireApp1.Web.styles.css"
@@ -1039,8 +1039,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "tshm6dq420",
-      "Integrity": "Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=",
+      "Fingerprint": "h54ytcuvgv",
+      "Integrity": "eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\AspireApp1.Web.bundle.scp.css"
@@ -2313,12 +2313,12 @@
     },
     {
       "Route": "AspireApp1.Web.bundle.scp.css",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-tshm6dq420.gz",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-h54ytcuvgv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000573723465"
+          "Quality": "0.000531067446"
         }
       ],
       "ResponseHeaders": [
@@ -2328,15 +2328,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1742"
+          "Value": "1882"
         },
         {
           "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2356,13 +2356,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
+          "Value": "W/\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
         }
       ]
     },
@@ -2377,7 +2377,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5800"
+          "Value": "6365"
         },
         {
           "Name": "Content-Type",
@@ -2385,11 +2385,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
+          "Value": "\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2399,13 +2399,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
         }
       ]
     },
     {
       "Route": "AspireApp1.Web.bundle.scp.css.gz",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-tshm6dq420.gz",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-h54ytcuvgv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2414,7 +2414,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1742"
+          "Value": "1882"
         },
         {
           "Name": "Content-Type",
@@ -2422,11 +2422,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2444,18 +2444,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A="
+          "Value": "sha256-/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow="
         }
       ]
     },
     {
-      "Route": "AspireApp1.Web.styles.css",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-tshm6dq420.gz",
+      "Route": "AspireApp1.Web.h54ytcuvgv.bundle.scp.css",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-h54ytcuvgv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000573723465"
+          "Quality": "0.000531067446"
         }
       ],
       "ResponseHeaders": [
@@ -2465,152 +2465,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1742"
+          "Value": "1882"
         },
         {
           "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
-        }
-      ]
-    },
-    {
-      "Route": "AspireApp1.Web.styles.css",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\AspireApp1.Web.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5800"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
-        }
-      ]
-    },
-    {
-      "Route": "AspireApp1.Web.styles.css.gz",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-tshm6dq420.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1742"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A="
-        }
-      ]
-    },
-    {
-      "Route": "AspireApp1.Web.tshm6dq420.bundle.scp.css",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-tshm6dq420.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000573723465"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1742"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2630,13 +2493,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
+          "Value": "W/\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tshm6dq420"
+          "Value": "h54ytcuvgv"
         },
         {
           "Name": "label",
@@ -2644,12 +2507,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
         }
       ]
     },
     {
-      "Route": "AspireApp1.Web.tshm6dq420.bundle.scp.css",
+      "Route": "AspireApp1.Web.h54ytcuvgv.bundle.scp.css",
       "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\AspireApp1.Web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2659,7 +2522,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5800"
+          "Value": "6365"
         },
         {
           "Name": "Content-Type",
@@ -2667,11 +2530,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
+          "Value": "\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2681,7 +2544,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tshm6dq420"
+          "Value": "h54ytcuvgv"
         },
         {
           "Name": "label",
@@ -2689,13 +2552,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
         }
       ]
     },
     {
-      "Route": "AspireApp1.Web.tshm6dq420.bundle.scp.css.gz",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-tshm6dq420.gz",
+      "Route": "AspireApp1.Web.h54ytcuvgv.bundle.scp.css.gz",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\s9mdrhq27o-h54ytcuvgv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2704,7 +2567,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1742"
+          "Value": "1882"
         },
         {
           "Name": "Content-Type",
@@ -2712,11 +2575,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2734,7 +2597,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tshm6dq420"
+          "Value": "h54ytcuvgv"
         },
         {
           "Name": "label",
@@ -2742,18 +2605,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A="
+          "Value": "sha256-/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow="
         }
       ]
     },
     {
-      "Route": "AspireApp1.Web.tshm6dq420.styles.css",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-tshm6dq420.gz",
+      "Route": "AspireApp1.Web.h54ytcuvgv.styles.css",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-h54ytcuvgv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000573723465"
+          "Quality": "0.000531067446"
         }
       ],
       "ResponseHeaders": [
@@ -2763,15 +2626,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1742"
+          "Value": "1882"
         },
         {
           "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2791,13 +2654,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
+          "Value": "W/\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tshm6dq420"
+          "Value": "h54ytcuvgv"
         },
         {
           "Name": "label",
@@ -2805,12 +2668,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
         }
       ]
     },
     {
-      "Route": "AspireApp1.Web.tshm6dq420.styles.css",
+      "Route": "AspireApp1.Web.h54ytcuvgv.styles.css",
       "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\AspireApp1.Web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2820,7 +2683,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5800"
+          "Value": "6365"
         },
         {
           "Name": "Content-Type",
@@ -2828,11 +2691,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\""
+          "Value": "\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2842,7 +2705,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tshm6dq420"
+          "Value": "h54ytcuvgv"
         },
         {
           "Name": "label",
@@ -2850,13 +2713,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
         }
       ]
     },
     {
-      "Route": "AspireApp1.Web.tshm6dq420.styles.css.gz",
-      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-tshm6dq420.gz",
+      "Route": "AspireApp1.Web.h54ytcuvgv.styles.css.gz",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-h54ytcuvgv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2865,7 +2728,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1742"
+          "Value": "1882"
         },
         {
           "Name": "Content-Type",
@@ -2873,11 +2736,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A=\""
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Apr 2025 09:05:45 GMT"
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2895,7 +2758,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tshm6dq420"
+          "Value": "h54ytcuvgv"
         },
         {
           "Name": "label",
@@ -2903,7 +2766,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NqpOtYUxrlIwVGCdxy7E4gcrsYkuT0g7Ltq2Iwbkn8A="
+          "Value": "sha256-/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow="
+        }
+      ]
+    },
+    {
+      "Route": "AspireApp1.Web.styles.css",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-h54ytcuvgv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000531067446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1882"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
+        }
+      ]
+    },
+    {
+      "Route": "AspireApp1.Web.styles.css",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\AspireApp1.Web.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6365"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="
+        }
+      ]
+    },
+    {
+      "Route": "AspireApp1.Web.styles.css.gz",
+      "AssetFile": "D:\\code\\vs\\AsprTest1\\AspireApp1.Web\\obj\\Debug\\net9.0\\compressed\\414240mgx8-h54ytcuvgv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1882"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 09:31:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/ka3GKJk1LRv+a+wOCYWN/yllBvRDqQXGQou/TUzAow="
         }
       ]
     },

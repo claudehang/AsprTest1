@@ -13,16 +13,16 @@
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2825"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pFbi5CQU/3WdSmKlXOMF0Cjw6HrxCzGeyz1yG0e4H14=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:03:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AspireApp1.Web/AspireApp1.Web.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AspireApp1.Web.tshm6dq420.bundle.scp.css'))</AssetFile>
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AspireApp1.Web.h54ytcuvgv.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5800"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:05:45 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6365"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:31:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/AspireApp1.Web/AspireApp1.Web.tshm6dq420.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AspireApp1.Web.tshm6dq420.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/AspireApp1.Web/AspireApp1.Web.h54ytcuvgv.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AspireApp1.Web.h54ytcuvgv.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tshm6dq420"},{"Name":"integrity","Value":"sha256-Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY="},{"Name":"label","Value":"_content/AspireApp1.Web/AspireApp1.Web.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5800"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Y0JJbK32zVbsnQSFZKBsiL0j1t9LUxhZRR5R/a1LmNY=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:05:45 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"h54ytcuvgv"},{"Name":"integrity","Value":"sha256-eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc="},{"Name":"label","Value":"_content/AspireApp1.Web/AspireApp1.Web.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6365"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eyn3lnC5wPjJFBnLKijtuOPPKd3cFO44RsYIo4vdKWc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:31:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AspireApp1.Web/favicon.ifv42okdf2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>
