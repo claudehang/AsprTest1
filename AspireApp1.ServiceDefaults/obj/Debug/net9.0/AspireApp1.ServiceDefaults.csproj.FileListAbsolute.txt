@@ -1,0 +1,12 @@
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\bin\Debug\net9.0\AspireApp1.ServiceDefaults.deps.json
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\bin\Debug\net9.0\AspireApp1.ServiceDefaults.dll
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\bin\Debug\net9.0\AspireApp1.ServiceDefaults.pdb
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.csproj.AssemblyReference.cache
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.AssemblyInfoInputs.cache
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.AssemblyInfo.cs
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.csproj.CoreCompileInputs.cache
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.dll
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\refint\AspireApp1.ServiceDefaults.dll
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\AspireApp1.ServiceDefaults.pdb
+D:\code\vs\AsprTest1\AspireApp1.ServiceDefaults\obj\Debug\net9.0\ref\AspireApp1.ServiceDefaults.dll
