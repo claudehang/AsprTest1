@@ -14,12 +14,12 @@
                 可用座位
             </div>
             <div class="card-body">
-                <p>当前可用座位：20个</p>
+                <p>当前可用座位：@seats.Count(s => !s.IsReserved)个</p>
                 <button class="btn btn-primary" @onclick="ReserveSeat">预约座位</button>
             </div>
         </div>
     </div>
-    
+
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
@@ -33,7 +33,8 @@
                         {
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 @reservation
-                                <button class="btn btn-sm btn-danger" @onclick="() => CancelReservation(reservation)">取消</button>
+                                <button class="btn btn-sm btn-danger"
+                                    @onclick="() => CancelReservation(reservation)">取消</button>
                             </li>
                         }
                     </ul>
@@ -47,17 +48,162 @@
     </div>
 </div>
 
+<!-- 座位图部分 -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                座位图
+            </div>
+            <div class="card-body">
+                <div class="seat-map">
+                    @foreach (var seat in seats)
+                    {
+                        <div class="seat @(seat.IsReserved ? "reserved" : "available")"
+                            @onclick="() => ToggleSeatReservation(seat)" title="@GetSeatTooltip(seat)">
+                            <span>@seat.Id</span>
+                        </div>
+                    }
+                </div>
+                <div class="seat-legend mt-3">
+                    <div class="d-flex align-items-center">
+                        <div class="seat-sample available"></div>
+                        <span class="ms-2">未预约</span>
+                    </div>
+                    <div class="d-flex align-items-center ms-3">
+                        <div class="seat-sample reserved"></div>
+                        <span class="ms-2">已预约</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .seat-map {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .seat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .seat.available {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .seat.reserved {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .seat:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .seat-legend {
+        display: flex;
+    }
+
+    .seat-sample {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+    }
+</style>
+
 @code {
+    private class Seat
+    {
+        public int Id { get; set; }
+        public bool IsReserved { get; set; }
+        public string? ReservationInfo { get; set; }
+    }
+
     private List<string> myReservations = new List<string>();
-    
+    private List<Seat> seats = new List<Seat>();
+
+    protected override void OnInitialized()
+    {
+        // 初始化20个座位
+        for (int i = 1; i <= 20; i++)
+        {
+            seats.Add(new Seat { Id = i, IsReserved = false });
+        }
+    }
+
+    private string GetSeatTooltip(Seat seat)
+    {
+        return seat.IsReserved ? $"已预约: {seat.ReservationInfo}" : "未预约，点击可预约";
+    }
+
+    private void ToggleSeatReservation(Seat seat)
+    {
+        if (seat.IsReserved)
+        {
+            // 如果是当前用户预约的座位，则取消预约
+            if (seat.ReservationInfo != null && myReservations.Contains(seat.ReservationInfo))
+            {
+                myReservations.Remove(seat.ReservationInfo);
+                seat.IsReserved = false;
+                seat.ReservationInfo = null;
+            }
+        }
+        else
+        {
+            // 如果未预约，则进行预约
+            var reservationId = $"座位 #{seat.Id} - {DateTime.Now:yyyy-MM-dd HH:mm}";
+            seat.IsReserved = true;
+            seat.ReservationInfo = reservationId;
+            myReservations.Add(reservationId);
+        }
+    }
+
     private void ReserveSeat()
     {
-        var reservationId = $"座位 #{myReservations.Count + 1} - {DateTime.Now.ToString("yyyy-MM-dd HH:mm")}";
-        myReservations.Add(reservationId);
+        // 查找第一个未预约的座位
+        var availableSeat = seats.FirstOrDefault(s => !s.IsReserved);
+        if (availableSeat != null)
+        {
+            ToggleSeatReservation(availableSeat);
+        }
     }
-    
+
     private void CancelReservation(string reservation)
     {
         myReservations.Remove(reservation);
+
+        // 从预约信息中解析出座位ID并更新座位状态
+        if (reservation.Contains('#'))
+        {
+            var parts = reservation.Split('#');
+            if (parts.Length > 1)
+            {
+                var seatIdPart = parts[1].Split(' ')[0];
+                if (int.TryParse(seatIdPart, out int seatId))
+                {
+                    var seat = seats.FirstOrDefault(s => s.Id == seatId);
+                    if (seat != null)
+                    {
+                        seat.IsReserved = false;
+                        seat.ReservationInfo = null;
+                    }
+                }
+            }
+        }
     }
 }
+
+   
