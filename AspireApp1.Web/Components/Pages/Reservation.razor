@@ -1,11 +1,15 @@
 @page "/reservation"
 @rendermode InteractiveServer
+@using AspireApp1.Web.Models
+@using AspireApp1.Web.Services
+@inject ReservationService ReservationService
+@inject IHttpContextAccessor HttpContextAccessor
 
 <PageTitle>座位预约</PageTitle>
 
 <h1>座位预约系统</h1>
 
-<p>这个组件用于展示和管理座位预约功能。</p>
+<p>这个组件用于展示和管理座位预约功能。所有预约信息已存储在PostgreSQL数据库中。</p>
 
 <div class="row">
     <div class="col-md-6">
@@ -14,7 +18,7 @@
                 可用座位
             </div>
             <div class="card-body">
-                <p>当前可用座位：@seats.Count(s => !s.IsReserved)个</p>
+                <p>当前可用座位：@(seats?.Count(s => !IsReservedToday(s)) ?? 0)个</p>
                 <button class="btn btn-primary" @onclick="ReserveSeat">预约座位</button>
             </div>
         </div>
@@ -26,15 +30,15 @@
                 我的预约
             </div>
             <div class="card-body">
-                @if (myReservations.Count > 0)
+                @if (userReservations.Count > 0)
                 {
                     <ul class="list-group">
-                        @foreach (var reservation in myReservations)
+                        @foreach (var reservation in userReservations)
                         {
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                @reservation
+                                @reservation.ReservationCode
                                 <button class="btn btn-sm btn-danger"
-                                    @onclick="() => CancelReservation(reservation)">取消</button>
+                                    @onclick="() => CancelReservation(reservation.Id)">取消</button>
                             </li>
                         }
                     </ul>
@@ -57,12 +61,19 @@
             </div>
             <div class="card-body">
                 <div class="seat-map">
-                    @foreach (var seat in seats)
+                    @if (seats != null)
                     {
-                        <div class="seat @(seat.IsReserved ? "reserved" : "available")"
-                            @onclick="() => ToggleSeatReservation(seat)" title="@GetSeatTooltip(seat)">
-                            <span>@seat.Id</span>
-                        </div>
+                        @foreach (var seat in seats)
+                        {
+                            <div class="seat @(IsReservedToday(seat) ? "reserved" : "available")"
+                                @onclick="() => ToggleSeatReservation(seat)" title="@GetSeatTooltip(seat)">
+                                <span>@seat.Id</span>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p>正在加载座位信息...</p>
                     }
                 </div>
                 <div class="seat-legend mt-3">
@@ -125,85 +136,94 @@
 </style>
 
 @code {
-    private class Seat
+    private List<Seat>? seats;
+    private List<Models.Reservation> userReservations = new();
+    private string userId = string.Empty;
+
+    protected override async Task OnInitializedAsync()
     {
-        public int Id { get; set; }
-        public bool IsReserved { get; set; }
-        public string? ReservationInfo { get; set; }
+        // 获取或生成用户ID (从Session中获取)
+        var session = HttpContextAccessor.HttpContext?.Session;
+        userId = session?.GetString("UserId") ?? Guid.NewGuid().ToString();
+
+        if (session != null && string.IsNullOrEmpty(session.GetString("UserId")))
+        {
+            session.SetString("UserId", userId);
+        }
+
+        await LoadDataAsync();
     }
 
-    private List<string> myReservations = new List<string>();
-    private List<Seat> seats = new List<Seat>();
-
-    protected override void OnInitialized()
+    private async Task LoadDataAsync()
     {
-        // 初始化20个座位
-        for (int i = 1; i <= 20; i++)
-        {
-            seats.Add(new Seat { Id = i, IsReserved = false });
-        }
+        seats = await ReservationService.GetAllSeatsAsync();
+        userReservations = await ReservationService.GetUserReservationsAsync(userId);
+    }
+
+    private bool IsReservedToday(Seat seat)
+    {
+        return seat.Reservations.Any(r => r.ReservationTime.Date == DateTime.Today);
     }
 
     private string GetSeatTooltip(Seat seat)
     {
-        return seat.IsReserved ? $"已预约: {seat.ReservationInfo}" : "未预约，点击可预约";
+        var todayReservation = seat.Reservations.FirstOrDefault(r => r.ReservationTime.Date == DateTime.Today);
+        return todayReservation != null
+        ? $"已预约: {todayReservation.ReservationCode}"
+        : "未预约，点击可预约";
     }
 
-    private void ToggleSeatReservation(Seat seat)
+    private async Task ToggleSeatReservation(Seat seat)
     {
-        if (seat.IsReserved)
+        if (IsReservedToday(seat))
         {
             // 如果是当前用户预约的座位，则取消预约
-            if (seat.ReservationInfo != null && myReservations.Contains(seat.ReservationInfo))
+            var myReservation = seat.Reservations
+            .FirstOrDefault(r => r.UserId == userId && r.ReservationTime.Date == DateTime.Today);
+
+            if (myReservation != null)
             {
-                myReservations.Remove(seat.ReservationInfo);
-                seat.IsReserved = false;
-                seat.ReservationInfo = null;
+                await CancelReservation(myReservation.Id);
             }
         }
         else
         {
             // 如果未预约，则进行预约
-            var reservationId = $"座位 #{seat.Id} - {DateTime.Now:yyyy-MM-dd HH:mm}";
-            seat.IsReserved = true;
-            seat.ReservationInfo = reservationId;
-            myReservations.Add(reservationId);
-        }
-    }
-
-    private void ReserveSeat()
-    {
-        // 查找第一个未预约的座位
-        var availableSeat = seats.FirstOrDefault(s => !s.IsReserved);
-        if (availableSeat != null)
-        {
-            ToggleSeatReservation(availableSeat);
-        }
-    }
-
-    private void CancelReservation(string reservation)
-    {
-        myReservations.Remove(reservation);
-
-        // 从预约信息中解析出座位ID并更新座位状态
-        if (reservation.Contains('#'))
-        {
-            var parts = reservation.Split('#');
-            if (parts.Length > 1)
+            try
             {
-                var seatIdPart = parts[1].Split(' ')[0];
-                if (int.TryParse(seatIdPart, out int seatId))
-                {
-                    var seat = seats.FirstOrDefault(s => s.Id == seatId);
-                    if (seat != null)
-                    {
-                        seat.IsReserved = false;
-                        seat.ReservationInfo = null;
-                    }
-                }
+                await ReservationService.ReserveSeatAsync(seat.Id, userId);
+                await LoadDataAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"预约座位失败: {ex.Message}");
             }
         }
     }
-}
 
-   
+    private async Task ReserveSeat()
+    {
+        // 查找第一个未预约的座位
+        if (seats != null)
+        {
+            var availableSeat = seats.FirstOrDefault(s => !IsReservedToday(s));
+            if (availableSeat != null)
+            {
+                await ToggleSeatReservation(availableSeat);
+            }
+        }
+    }
+
+    private async Task CancelReservation(int reservationId)
+    {
+        try
+        {
+            await ReservationService.CancelReservationAsync(reservationId, userId);
+            await LoadDataAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"取消预约失败: {ex.Message}");
+        }
+    }
+}
