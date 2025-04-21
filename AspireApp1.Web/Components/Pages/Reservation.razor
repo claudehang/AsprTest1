@@ -19,6 +19,14 @@
             </div>
             <div class="card-body">
                 <p>当前可用座位：@(seats?.Count(s => !IsReservedToday(s)) ?? 0)个</p>
+
+                <div class="mb-3">
+                    <label for="endDate" class="form-label">结束日期 (当前月最后一天:
+                        @lastDayOfMonth.ToString("yyyy-MM-dd"))</label>
+                    <input type="date" class="form-control" id="endDate" min="@DateTime.Today.ToString("yyyy-MM-dd")"
+                        max="@lastDayOfMonth.ToString("yyyy-MM-dd")" @bind="selectedEndDate" />
+                </div>
+
                 <button class="btn btn-primary" @onclick="ReserveSeat">预约座位</button>
             </div>
         </div>
@@ -65,7 +73,7 @@
                     {
                         @foreach (var seat in seats)
                         {
-                            <div class="seat @(IsReservedToday(seat) ? "reserved" : "available")"
+                            <div class="seat @(IsReservedForSelectedDate(seat) ? "reserved" : "available")"
                                 @onclick="() => ToggleSeatReservation(seat)" title="@GetSeatTooltip(seat)">
                                 <span>@seat.Id</span>
                             </div>
@@ -139,6 +147,8 @@
     private List<Seat>? seats;
     private List<Models.Reservation> userReservations = new();
     private string userId = string.Empty;
+    private DateTime lastDayOfMonth;
+    private DateTime selectedEndDate;
 
     protected override async Task OnInitializedAsync()
     {
@@ -151,6 +161,10 @@
             session.SetString("UserId", userId);
         }
 
+        // 获取当月最后一天
+        lastDayOfMonth = ReservationService.GetLastDayOfMonth();
+        selectedEndDate = lastDayOfMonth; // 默认设置为当月最后一天
+
         await LoadDataAsync();
     }
 
@@ -162,36 +176,45 @@
 
     private bool IsReservedToday(Seat seat)
     {
-        return seat.Reservations.Any(r => r.ReservationTime.Date == DateTime.Today);
+        var today = DateTime.Today;
+        return seat.Reservations.Any(r => r.ReservationTime.Date <= today && r.EndTime.Date >= today);
+    }
+
+    private bool IsReservedForSelectedDate(Seat seat)
+    {
+        var today = DateTime.Today;
+
+        return seat.Reservations.Any(r =>
+        (r.ReservationTime.Date <= selectedEndDate && r.EndTime.Date >= today) ||
+        (r.ReservationTime.Date <= today && r.EndTime.Date >= today));
     }
 
     private string GetSeatTooltip(Seat seat)
     {
-        var todayReservation = seat.Reservations.FirstOrDefault(r => r.ReservationTime.Date == DateTime.Today);
-        return todayReservation != null
-        ? $"已预约: {todayReservation.ReservationCode}"
+        var overlappingReservation = seat.Reservations.FirstOrDefault(r =>
+        r.ReservationTime.Date <= selectedEndDate && r.EndTime.Date >= DateTime.Today);
+
+        return overlappingReservation != null
+        ? $"已预约: {overlappingReservation.ReservationCode}"
         : "未预约，点击可预约";
     }
 
     private async Task ToggleSeatReservation(Seat seat)
     {
-        if (IsReservedToday(seat))
-        {
-            // 如果是当前用户预约的座位，则取消预约
-            var myReservation = seat.Reservations
-            .FirstOrDefault(r => r.UserId == userId && r.ReservationTime.Date == DateTime.Today);
+        var overlappingReservation = seat.Reservations.FirstOrDefault(r =>
+        r.ReservationTime.Date <= selectedEndDate && r.EndTime.Date >= DateTime.Today && r.UserId == userId);
 
-            if (myReservation != null)
-            {
-                await CancelReservation(myReservation.Id);
-            }
+        if (overlappingReservation != null)
+        {
+            // 如果是当前用户的预约，则取消
+            await CancelReservation(overlappingReservation.Id);
         }
-        else
+        else if (!IsReservedForSelectedDate(seat))
         {
             // 如果未预约，则进行预约
             try
             {
-                await ReservationService.ReserveSeatAsync(seat.Id, userId);
+                await ReservationService.ReserveSeatAsync(seat.Id, userId, selectedEndDate);
                 await LoadDataAsync();
             }
             catch (Exception ex)
@@ -206,7 +229,7 @@
         // 查找第一个未预约的座位
         if (seats != null)
         {
-            var availableSeat = seats.FirstOrDefault(s => !IsReservedToday(s));
+            var availableSeat = seats.FirstOrDefault(s => !IsReservedForSelectedDate(s));
             if (availableSeat != null)
             {
                 await ToggleSeatReservation(availableSeat);

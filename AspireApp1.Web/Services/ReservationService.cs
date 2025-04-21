@@ -15,30 +15,26 @@ public class ReservationService
 
     public async Task<List<Seat>> GetAllSeatsAsync()
     {
-        // 使用日期范围解决时区问题 (转换为UTC)
-        var todayStart = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
-        var todayEnd = DateTime.SpecifyKind(DateTime.Today.AddDays(1).AddTicks(-1), DateTimeKind.Utc);
+        var today = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
 
         return await _context.Seats
-            .Include(s => s.Reservations.Where(r =>
-                r.ReservationTime >= todayStart &&
-                r.ReservationTime <= todayEnd))
+            .Include(s => s.Reservations.Where(r => r.EndTime >= today))
             .ToListAsync();
     }
 
     public async Task<List<Reservation>> GetUserReservationsAsync(string userId)
     {
         // 获取今天及以后的预约 (使用UTC时间)
-        var todayStart = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
+        var today = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
 
         return await _context.Reservations
             .Include(r => r.Seat)
-            .Where(r => r.UserId == userId && r.ReservationTime >= todayStart)
+            .Where(r => r.UserId == userId && r.EndTime >= today)
             .OrderBy(r => r.ReservationTime)
             .ToListAsync();
     }
 
-    public async Task<Reservation> ReserveSeatAsync(int seatId, string userId)
+    public async Task<Reservation> ReserveSeatAsync(int seatId, string userId, DateTime endDate)
     {
         var seat = await _context.Seats.FindAsync(seatId);
         if (seat == null)
@@ -46,27 +42,30 @@ public class ReservationService
             throw new ArgumentException("座位不存在", nameof(seatId));
         }
 
-        // 检查座位是否已被预约 (使用UTC时间)
-        var todayStart = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
-        var todayEnd = DateTime.SpecifyKind(DateTime.Today.AddDays(1).AddTicks(-1), DateTimeKind.Utc);
+        // 确保开始和结束日期都是UTC时间
+        var startDate = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
+        endDate = DateTime.SpecifyKind(endDate.Date, DateTimeKind.Utc);
 
-        var existingReservation = await _context.Reservations
-            .FirstOrDefaultAsync(r => r.SeatId == seatId &&
-                               r.ReservationTime >= todayStart &&
-                               r.ReservationTime <= todayEnd);
+        // 检查是否有冲突的预约
+        var hasConflict = await _context.Reservations
+            .AnyAsync(r => r.SeatId == seatId &&
+                      ((r.ReservationTime <= endDate && r.EndTime >= startDate) ||
+                       (r.ReservationTime <= endDate && r.EndTime >= endDate) ||
+                       (r.ReservationTime <= startDate && r.EndTime >= startDate)));
 
-        if (existingReservation != null)
+        if (hasConflict)
         {
-            throw new InvalidOperationException("该座位今天已被预约");
+            throw new InvalidOperationException("该座位在选定的日期范围内已被预约");
         }
 
-        var now = DateTime.UtcNow; // 使用UTC时间
-        var reservationCode = $"座位 #{seatId} - {now:yyyy-MM-dd HH:mm}";
+        var now = DateTime.UtcNow;
+        var reservationCode = $"座位 #{seatId} - {startDate:yyyy-MM-dd}至{endDate:yyyy-MM-dd}";
         var reservation = new Reservation
         {
             SeatId = seatId,
             UserId = userId,
-            ReservationTime = now,
+            ReservationTime = startDate,
+            EndTime = endDate,
             ReservationCode = reservationCode
         };
 
@@ -91,5 +90,13 @@ public class ReservationService
 
         _context.Reservations.Remove(reservation);
         await _context.SaveChangesAsync();
+    }
+
+    // 获取当月最后一天的方法
+    public DateTime GetLastDayOfMonth()
+    {
+        var today = DateTime.Today;
+        var lastDay = new DateTime(today.Year, today.Month, DateTime.DaysInMonth(today.Year, today.Month));
+        return lastDay;
     }
 }

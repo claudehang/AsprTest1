@@ -49,6 +49,8 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ReservationDbContext>();
+    // 重新创建数据库以应用模型变更
+    dbContext.Database.EnsureDeleted();
     dbContext.Database.EnsureCreated();
 }
 
